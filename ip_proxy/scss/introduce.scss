@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "core/setting";
+@import "core/css3";
+@import "core/_mixin";
+
+html,body{
+    background-color: #fff;
+}
+
+.download{
+    .download_banner{
+        margin: 0 auto;
+        width: 1400px;
+        height: 490px;
+        background:url("../img/buy/download_bg.png") no-repeat 0px 0px;
+    }
+    .download_r{
+        float: right;
+        width: 720px;
+        height: 490px;
+    }
+    .download_h2{
+        margin: 107px 0px 0px 0px;
+        font-size: 24px;
+        color: #fff;
+        font-weight: 700;
+        text-align: left;
+    }
+    .download_r_span{
+        position: relative;
+        top: -4px;
+        left: 10px;
+        display: inline-block;
+        border-radius: 2px;
+        padding: 2px 4px;
+        text-align: center;
+        line-height: 18px;
+        font-size: 9px;
+        background-color: #2b75f3;
+    }
+    .download_h1{
+        margin:0px 0px 0px 0px;
+        font-size: 48px;
+        font-weight: 700;
+        color: #fff;
+        text-align: left;
+    }
+    .download_hr{
+        display: block;
+        margin: 0px;
+        width: 400px;
+        height: 1px;
+        border: none;
+        float: left;
+        background-color: #fff;
+    }
+    .window_and{
+        position: relative;
+        margin-top: 30px;
+        width: 400px;
+        height:110px;
+    }
+
+    .window{
+        display: block;
+        width: 198px;
+        height:48px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        text-align: center;
+        line-height: 48px;
+        color: #fff;
+        font-size: 16px;
+    @include transition();
+    }
+    .window_ico{
+        position: relative;
+        font-size: 20px;
+        top: 1px;
+    }
+    .and_ico{
+        font-size: 23px
+    }
+    .window:nth-child(1){
+        margin-bottom: 10px;
+    }
+    .qr_code{
+        position: absolute;
+        top: 0px;;
+        right: 43px;
+        width: 110px;
+        height: 110px;
+        background-color: #fff;
+    }
+    .window:hover{
+        border: 1px solid #2b75f3;
+        background-color: #2b75f3;
+    }
+
+
+    .down_introduce{
+        font-size: 37px;
+        color: #000;
+        font-weight: 400;
+    }
+
+    .introduce{
+            margin: 50px auto 0px auto;
+            width: 1400px;
+            min-width: 520px;
+            background-color: #fff;
+    }
+    .down_introduce_h2{
+            margin: 0 auto;
+            width: 700px;
+            font-size: 16px;
+            color: #949494;
+            text-align: center;
+    }
+    .down_ul{
+        position: relative;
+        float: left;
+        left:50%;
+        margin: 50px 0px 75px -700px;
+        width: 1400px;
+        min-height: 225px;
+    }
+
+    .down_ul li{
+        float: left;
+        width: 230px;
+        min-height: 225px;
+        background-color: red;
+        margin-left: 176px;
+    }
+
+    .down_ul li:nth-child(1){
+        background: url("../img/buy/down.png") no-repeat -384px -28px;
+    }
+
+    .down_ul li:nth-child(2){
+        background: url("../img/buy/down.png") no-repeat -784px -28px;
+    }
+    .down_ul li:nth-child(3){
+        background: url("../img/buy/down.png") no-repeat -1187px -28px;
+    }
+    .down_ul li h1{
+        font-size: 22px;
+        color: #3f4244;
+        margin-top: 90px;
+    }
+    .down_ul_bg{
+        display: block;
+        margin: 15px auto 0px auto;
+        width: 103px;
+        height: 20px;
+        background: url("../img/buy/down.png") no-repeat -102px -59px ;
+    }
+    .down_ul li h2{
+        margin: 0px;
+        width: 230px;
+        font-size: 16px;
+        color: #7f7f7f;
+        margin-top: 16px;
+        line-height: 23px;
+
+    }
+
+
+
+}

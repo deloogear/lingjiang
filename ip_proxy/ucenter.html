@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/ucenter.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <title>会员中心</title>
+</head>
+<body>
+<header class="header">
+    <div class="h-main">
+        <div class="logo">
+            <a href="index.html" title="返回首页">梦蝶代理宝</a>
+        </div>
+        <nav class="menu">
+            <a href="index.html">首页</a>
+            <a href="line.html">线路介绍</a>
+            <a href="package.html" class="active">在线购买</a>
+            <a href="help.html">试用帮助</a>
+        </nav>
+        <div class="links">
+            <a class="link-uc" href="ucenter.html">会员中心</a>
+            <a class="link-reg" href="register.html">免费注册</a>
+            <a class="link-login" href="login.html">登录</a>
+        </div>
+    </div>
+</header>
+<section class="uc-main">
+    <aside class="uc-aside">
+        <div class="user-info">
+            <img src="img/ucenter/uc-logo.png" class="ava">
+            <a class="user-name cmd-item" data-cmd="info" title="点击修改用户信息">这是用户名称!</a>
+            <span class="user-label">个人用户</span>
+        </div>
+        <div class="user-account">
+            <h4><span>套餐剩余</span>1个月18天</h4>
+            <h4><span>套餐到期时间</span>2016.06.01</h4>
+        </div>
+        <div class="uc-menu">
+            <a href="package.html" target="_blank"  class="" data-cmd="recharge">
+                <span><i class="iconfont">&#xe605;</i>我要充值</span></a>
+            <a  class="cmd-item " data-cmd="log">
+                <span><i class="iconfont">&#xe608;</i>使用记录</span></a>
+            <a  class="cmd-item " data-cmd="record">
+                <span><i class="iconfont">&#xe609;</i>充值记录</span></a>
+            <a  class="cmd-item " data-cmd="info">
+                <span><i class="iconfont">&#xe619;</i>账号管理</span></a>
+        </div>
+        <div class="uc-btn">
+            <a class="cmd-item" data-cmd="logout">退出</a>
+        </div>
+    </aside>
+    <article class="uc-modules">
+        <!--用户资料-->
+        <div id="mt-info" class="modules-tab edit-info">
+            <h4 class="tab-title">修改资料</h4>
+            <div class="user-form">
+                <div class="uf-line info-name">
+                    <span><i class="iconfont">&#xe600;</i>用户名</span><h6>这就是用户名</h6><a>修改密码</a>
+                </div>
+                <div class="uf-line info-phone" >
+                    <span><i class="iconfont">&#xe617;</i>手机号</span><h6>123213213</h6><a id="info-bind-phone">绑定手机</a>
+                </div>
+
+                <!--绑定手机号-->
+                <div class="uf-hd-edit info-phone-edit">
+                    <div class="uf-line">
+                        <span><i class="iconfont">&#xe617;</i>手机号</span>
+                        <label><input placeholder="请输入绑定的手机号" value=""></label>
+                        <p class="error"><span>*</span>手机号不正确!</p>
+                    </div>
+                    <div class="uf-line">
+                        <span><i class="iconfont">&#xe618;</i>验证码</span>
+                        <label class="val-img"><input placeholder="请输入验证码" value=""><img src="http://oai1j38hq.bkt.clouddn.com/image/alert_tip_bg.png"></label>
+                    </div>
+                    <a class="">绑定手机</a>
+                </div>
+
+                <div class="uf-line info-email">
+                    <span><i class="iconfont">&#xe61a;</i>邮箱</span><h6>123213213@1123232.com</h6><a id="info-bind-email">绑定邮箱</a>
+                </div>
+                <!--绑定邮箱-->
+                <div class="uf-hd-edit info-email-edit">
+                    <div class="uf-line">
+                        <span><i class="iconfont">&#xe617;</i>手机号</span>
+                        <label><input placeholder="请输入绑定的手机号" value=""></label>
+                        <p class="error"><span>*</span>手机号不正确!</p>
+                    </div>
+                    <div class="uf-line">
+                        <span><i class="iconfont">&#xe618;</i>验证码</span>
+                        <label class="val-img"><input placeholder="请输入验证码" value=""><img src="http://oai1j38hq.bkt.clouddn.com/image/alert_tip_bg.png"></label>
+                    </div>
+                    <a  class="">绑定手机</a>
+                </div>
+            </div>
+        </div>
+        <!--我要充值-->
+        <div id="mt-recharge"  class="modules-tab">
+        </div>
+        <!--操作日志-->
+        <div id="mt-log" class="modules-tab">
+            <h4 class="tab-title">使用记录</h4>
+            <div class="data-table dt-record recharge-online">
+                <div class="dt-sel">
+                    <a class="active">本月</a>
+                    <a class="">上月</a>
+                </div>
+                <div class="tab-content">
+                    <table >
+                        <thead>
+                        <tr>
+                            <th width="">日期</th>
+                            <th width="">登录IP</th>
+                            <th width="">已使用次数</th>
+                            <th width="">流量记录</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2016.01.01 12:00:00</td>
+                                <td>102.222.222.222</td>
+                                <td>3434</td>
+                                <td>345M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="no-record">
+                        暂无记录
+                    </div>
+                </div>
+
+                <div class="page">
+                    <a class="link">上一页</a>
+                    <a class="link cur">1</a>
+                    <a class="link">2</a>
+                    <a class="link">3</a>
+                    <a class="link">4</a>
+                    <a class="link">下一页</a>
+                </div>
+            </div>
+        </div>
+        <!--充值记录-->
+        <div id="mt-record" class="modules-tab">
+            <h4 class="tab-title">充值记录</h4>
+            <div class="tab-class-sel">
+                <h4 class=""><label>在线充值</label><i class="iconfont">&#xe61b;</i></h4>
+                <ul class="ts-list">
+                    <li class="" data-type="online">在线充值</li>
+                    <li class="" data-type="card">卡密充值</li>
+                </ul>
+            </div>
+         <div class="data-table dt-record recharge-online" style="display: none">
+            <div class="dt-sel">
+                <a class="active">本月</a>
+                <a class="">上月</a>
+            </div>
+             <div class="tab-content">
+                 <table >
+                     <thead>
+                     <tr>
+                         <th width="30%">订单名称</th>
+                         <th width="30%">订单号</th>
+                         <th width="20%">充值状态</th>
+                         <th width="20%">时间</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+                     <tr>
+                         <td>订单名称(20个字符)</td>
+                         <td>93634887610</td>
+                         <td>成功/失败</td>
+                         <td>2016.01.01 12:00:00</td>
+                     </tr>
+
+                     </tbody>
+                 </table>
+             </div>
+
+             <div class="page">
+                 <a class="link">上一页</a>
+                 <a class="link cur">1</a>
+                 <a class="link">2</a>
+                 <a class="link">3</a>
+                 <a class="link">4</a>
+                 <a class="link">下一页</a>
+             </div>
+        </div>
+         <div class="data-table dt-record recharge-card">
+                <div class="dt-sel">
+                    <a class="active">本月</a>
+                    <a class="">上月</a>
+                </div>
+                <div class="tab-content">
+                    <table >
+                        <thead>
+                        <tr>
+                            <th width="20%">订单名称</th>
+                            <th width="15%">订单号</th>
+                            <th width="15%">金额</th>
+                            <th width="15%">支付方式</th>
+                            <th width="15%">充值状态</th>
+                            <th width="20%">时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>订单名称(20个字符)</td>
+                            <td>93634887610</td>
+                            <td>12.00</td>
+                            <td>支付宝</td>
+                            <td>成功/失败</td>
+                            <td>2016.01.01 12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>订单名称(20个字符)</td>
+                            <td>93634887610</td>
+                            <td>12.00</td>
+                            <td>支付宝</td>
+                            <td>成功/失败</td>
+                            <td>2016.01.01 12:00:00</td>
+                        </tr><tr>
+                            <td>订单名称(20个字符)</td>
+                            <td>93634887610</td>
+                            <td>12.00</td>
+                            <td>支付宝</td>
+                            <td>成功/失败</td>
+                            <td>2016.01.01 12:00:00</td>
+                        </tr><tr>
+                            <td>订单名称(20个字符)</td>
+                            <td>93634887610</td>
+                            <td>12.00</td>
+                            <td>支付宝</td>
+                            <td>成功/失败</td>
+                            <td>2016.01.01 12:00:00</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="page">
+                    <a class="link">上一页</a>
+                    <a class="link cur">1</a>
+                    <a class="link">2</a>
+                    <a class="link">3</a>
+                    <a class="link">4</a>
+                    <a class="link">2</a>
+                    <a class="link">3</a>
+                    <a class="link">4</a>
+                    <a class="link">下一页</a>
+                </div>
+            </div>
+
+
+        </div>
+        <!--welcome-->
+        <div id="mt-welcome" class="modules-tab welcome">
+            <h4>欢迎您使用梦蝶代理宝!</h4>
+        </div>
+        <!--loading-->
+        <div id="mt-loading" class="modules-tab loading">
+            <div class="loading-block">
+                <h4>加载中...<span>请稍等!</span></h4>
+            </div>
+        </div>
+        <!--error-->
+        <div id="mt-error" class="modules-tab error">
+            error! 出错了!
+            请刷新
+        </div>
+    </article>
+</section>
+
+<div class="modal m-edit-password" >
+    <div class="modal-info-main">
+        <h4><span ><i class="iconfont">&#xe603;</i></span>修改密码</h4>
+        <p class="error-info">原密码不正确!</p>
+        <div class="edit-form">
+            <div class="edf-line">
+                <label>旧密码</label>
+                <input placeholder="请输入原密码">
+            </div>
+            <div class="edf-line">
+                <label>新密码</label>
+                <input placeholder="请输入新密码">
+            </div>
+            <div class="edf-line">
+                <label>确认密码</label>
+                <input placeholder="请重复输入新密码">
+            </div>
+            <div class="edf-line edf-var">
+                <label>验证码</label>
+                <input placeholder="请输入验证码">
+                <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
+            </div>
+            <div class="edf-btn-group">
+                <a class="edf-btn">修改密码</a>
+                <a class="edf-btn cancel">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal m-edit-email " >
+    <div class="modal-info-main">
+        <h4><span ><i class="iconfont">&#xe61a;</i></span>修改邮箱</h4>
+        <p class="error-info">原邮箱不正确!</p>
+        <div class="edit-form">
+            <div class="edf-line">
+                <label>验证邮箱</label>
+                <input placeholder="请输入原邮箱">
+            </div>
+            <div class="edf-line">
+                <label>新邮箱</label>
+                <input placeholder="请输入新邮箱">
+            </div>
+            <div class="edf-line edf-var">
+                <label>邮箱验证码</label>
+                <input placeholder="请输入验证码">
+                <a>获取验证码</a>
+            </div>
+            <div class="edf-line edf-var">
+                <label>验证码</label>
+                <input placeholder="请输入验证码">
+                <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
+            </div>
+            <div class="edf-btn-group">
+                <a class="edf-btn">确认保存</a>
+                <a class="edf-btn cancel">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal m-edit-phone ">
+    <div class="modal-info-main">
+        <h4><span ><i class="iconfont">&#xe61a;</i></span>修改手机号</h4>
+        <p class="error-info">您输入的手机号不正确!</p>
+        <div class="edit-form">
+            <div class="edf-line">
+                <label>验证手机</label>
+                <input placeholder="请输入原手机号">
+            </div>
+            <div class="edf-line">
+                <label>新手机</label>
+                <input placeholder="请输入新手机号">
+            </div>
+            <div class="edf-line edf-var">
+                <label>验证码</label>
+                <input placeholder="请输入验证码">
+                <a>获取验证码</a>
+            </div>
+            <div class="edf-line edf-var">
+                <label>验证码</label>
+                <input placeholder="请输入验证码">
+                <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
+            </div>
+            <div class="edf-btn-group">
+                <a class="edf-btn">确认保存</a>
+                <a class="edf-btn cancel">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--站脚-->
+<footer class="footer-uc">
+    <p><a>代理IP</a><a>每日代理</a><a>价格&购买</a><a>使用帮助</a>
+        <span>联系方式 0516-83994999</span>
+        <span>服务时间 周一至周六09:00～18:00</span><br/>Powered by LingJiang tech. © 2016 | 苏ICP备16018502号-4</p>
+</footer>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/uc-control.js"></script>
+<script type="text/javascript" src="js/ucenter.js"></script>
+</body>
+</html>

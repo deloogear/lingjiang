@@ -1,0 +1,52 @@
+.header > div, .lm-form .login-link, .reg-form .ref-fline { *zoom: 1; }
+.header > div:before, .lm-form .login-link:before, .reg-form .ref-fline:before, .header > div:after, .lm-form .login-link:after, .reg-form .ref-fline:after { content: ""; display: table; }
+.header > div:after, .lm-form .login-link:after, .reg-form .ref-fline:after { clear: both; }
+
+body { min-width: 1200px; background: url("../img/login_bg.jpg") bottom center no-repeat; background-size: cover; }
+
+.header { width: 100%; height: 90px; display: block; }
+.header > div { width: 100%; position: relative; margin: 0 auto; }
+.header > div > .head-cap { width: 300px; height: 90px; float: left; margin-left: 30px; background: url("../img/login_title.png") no-repeat 0 25px; }
+.header > div > .head-menu { float: left; width: 90px; height: 36px; line-height: 36px; color: #fff; box-sizing: border-box; position: relative; margin: 22px 0 0  28px; font-size: 18px; font-weight: bold; letter-spacing: 1px; font-family: "SimHei"; }
+.header > div > .head-menu > span { height: 44px; position: absolute; left: -28px; top: -4px; background: #fff; width: 2px; }
+
+.login_main { width: 100%; height: 700px; display: table; table-layout: fixed; }
+.login_main > .lm-con { width: 100%; display: table-cell; table-layout: fixed; vertical-align: middle; }
+
+.lm-form { /*height: 600px;*/ width: 440px; margin: auto; padding-top: 100px; position: relative; }
+.lm-form > h4 { width: 100%; height: 190px; display: block; background: url("../img/login_title.png") no-repeat 80px -130px; position: absolute; top: -90px; }
+.lm-form .login-block { width: 100%; border-radius: 20px; background: rgba(255, 255, 255, 0.4); display: block; margin: auto; box-sizing: border-box; padding: 10px 0; }
+.lm-form .login-block .log-inputline { line-height: 48px; padding: 16px 0; box-sizing: border-box; border-bottom: 1px solid #eae5e1; height: 82px; position: relative; }
+.lm-form .login-block .log-inputline.vcode { border-bottom: 0px solid #eae5e1; }
+.lm-form .login-block .log-inputline.vcode > input { padding-right: 200px; }
+.lm-form .login-block .log-inputline.vcode > img { position: absolute; width: 160px; height: 56px; right: 15px; top: 14px; cursor: pointer; }
+.lm-form .login-block .log-inputline > input { width: 100%; height: 48px; line-height: 48px; box-sizing: border-box; padding: 0 20px 0 90px; background: transparent; border: none; outline: none; font-size: 18px; color: #eee; }
+.lm-form .login-block .log-inputline > label { position: absolute; width: 66px; height: 42px; display: block; left: 10px; top: 20px; line-height: 42px; text-align: center; border-right: 2px solid #fff; }
+.lm-form .login-block .log-inputline > label > i { font-size: 34px; color: #f9f9f9; }
+.lm-form .login-link { width: 100%; height: 52px; line-height: 52px; }
+.lm-form .login-link > a { line-height: 24px; color: #fff; float: left; padding: 0 10px; margin: 14px 0; cursor: pointer; font-size: 18px; font-family: "SimHei"; -webkit-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+.lm-form .login-link > a.reg_link { float: left; }
+.lm-form .login-link > a.reg_link:hover { color: #1592fa; }
+.lm-form .login-link > a.rember_pw { float: right; }
+.lm-form .login-link > a.rember_pw:hover { color: #ed383d; }
+.lm-form .login_btn { width: 100%; height: 64px; line-height: 64px; display: block; text-align: center; color: #fff; background: rgba(255, 255, 255, 0.4); border-radius: 8px; cursor: pointer; font-weight: bold; font-family: "SimHei"; font-size: 20px; letter-spacing: 1px; -webkit-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+.lm-form .login_btn:hover { background: rgba(255, 255, 255, 0.6); }
+
+.footer { padding: 10px 0; background: #000; text-align: center; color: #fff; }
+.footer > p { line-height: 30px; }
+.footer > a { padding: 0 6px; line-height: 20px; color: #fff; cursor: pointer; -webkit-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+.footer > a:hover { color: #ccc; }
+
+.reg-form { width: 730px; background: rgba(255, 255, 255, 0.3); padding-bottom: 50px; margin: auto; border-radius: 6px; box-shadow: 0 0 2px #ccc; position: relative; z-index: 1; }
+.reg-form > h4 { line-height: 78px; width: 100%; box-sizing: border-box; display: block; padding-left: 30px; letter-spacing: 1px; font-size: 16px; color: #fff; font-weight: normal; border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
+.reg-form .ref-fline { width: 100%; display: block; line-height: 42px; margin-top: 24px; }
+.reg-form .ref-fline > label { width: 230px; float: left; box-sizing: border-box; padding-right: 30px; text-align: right; color: #fff; font-size: 16px; letter-spacing: 1px; }
+.reg-form .ref-fline > input { float: left; width: 275px; line-height: 42px; height: 42px; border: none; outline: none; box-sizing: border-box; padding: 0 20px; font-size: 16px; border-radius: 5px; }
+.reg-form .ref-fline > span { float: left; padding: 0 20px; line-height: 25px; height: 25px; border-radius: 25px; background: #00b0d4; margin: 8px 0 0 25px; color: #fff; }
+.reg-form .sub_btn { width: 275px; margin: 30px 0 0 230px; line-height: 42px; height: 42px; background: #00b0d4; display: block; border-radius: 5px; color: #fff; text-align: center; cursor: pointer; -webkit-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+.reg-form .sub_btn:hover { background: #08d5ff; }
+
+.reg-review { width: 730px; height: 250px; box-sizing: border-box; background: rgba(255, 255, 255, 0.3); text-align: center; padding: 80px 0 60px 0; border-radius: 10px; position: absolute; top: 50%; left: 50%; display: none; z-index: 2; opacity: 0; -webkit-transition: 0.5s; -ms-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; -webkit-transform: translate(-50%, -80%); -ms-transform: translate(-50%, -80%); -moz-transform: translate(-50%, -80%); transform: translate(-50%, -80%); }
+.reg-review.active { opacity: 1; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.reg-review > label { width: 270px; height: 42px; line-height: 42px; color: #fff; display: block; margin: auto; font-size: 18px; letter-spacing: 1px; text-align: center; border-radius: 42px; background: #00b0d4; }
+.reg-review > p { line-height: 70px; color: #f8f8f8; font-size: 14px; letter-spacing: 1px; }
